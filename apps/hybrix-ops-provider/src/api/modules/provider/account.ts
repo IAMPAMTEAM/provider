@@ -1,5 +1,11 @@
 import { useAxios } from '@vueuse/integrations/useAxios';
-import { homeAccountInstance } from '@/api';
+import {
+  homeAccountInstance,
+  awsAccountInstance,
+  awsSocialUsersInstance,
+  awsTenantsInstance,
+  awsRegionsInstance,
+} from '@/api';
 import type { RetrieveParams, UpdateParams, DeleteParams } from '@/api/types';
 
 enum Api {
@@ -28,6 +34,46 @@ export const retrieveAccounts = async ({ query }: RetrieveParams) => {
       method: 'GET',
     },
     homeAccountInstance
+  );
+};
+
+export const getAccounts = async () => {
+  return useAxios(
+    '/',
+    {
+      method: 'GET',
+    },
+    awsAccountInstance
+  );
+};
+
+export const getSocialUsers = async () => {
+  return useAxios(
+    '/',
+    {
+      method: 'GET',
+    },
+    awsSocialUsersInstance
+  );
+};
+
+export const getTenants = async () => {
+  return useAxios(
+    '/',
+    {
+      method: 'GET',
+    },
+    awsTenantsInstance
+  );
+};
+
+export const getRegions = async () => {
+  return useAxios(
+    '/',
+    {
+      method: 'GET',
+    },
+    awsRegionsInstance
   );
 };
 

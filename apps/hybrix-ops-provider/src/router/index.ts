@@ -32,7 +32,7 @@ const routes: Array<RouteRecordRaw> = [
         component: () => import('@/views/Tenant/TenantContainer.vue'),
       },
       {
-        path: 'management-paying-account',
+        path: 'management-tenants-account',
         name: 'managementPayingAccount',
         component: () =>
           import('@/views/ManagementPayingAccount/ManagementPayingAccountContainer.vue'),
@@ -76,11 +76,6 @@ const routes: Array<RouteRecordRaw> = [
         component: () => import('@/views/MetaData/Product/ProductContainer.vue'),
       },
       {
-        path: 'service',
-        name: 'metadata-service',
-        component: () => import('@/views/MetaData/Service/ServiceContainer.vue'),
-      },
-      {
         path: 'resource',
         name: 'metadata-resource',
         component: () => import('@/views/MetaData/Resource/ResourceContainer.vue'),
@@ -89,16 +84,6 @@ const routes: Array<RouteRecordRaw> = [
         path: 'region',
         name: 'metadata-region',
         component: () => import('@/views/MetaData/Region/RegionContainer.vue'),
-      },
-      {
-        path: 'security-term',
-        name: 'metadata-security-term',
-        component: () => import('@/views/MetaData/SecurityTerm/SecurityTermContainer.vue'),
-      },
-      {
-        path: 'svg-icon',
-        name: 'metadata-svg-icon',
-        component: () => import('@/views/MetaData/SvgIcon/SvgIconContainer.vue'),
       },
     ],
   },

@@ -5,7 +5,7 @@
       style="height: 100%"
       :default-col-def="DEFAULT_COL_DEF"
       :column-defs="columnDefs"
-      :row-data="data"
+      :row-data="tenants"
       pagination
       :paginationPageSize="15"
       @grid-ready="onGridReady"
@@ -27,6 +27,7 @@
 <script setup lang="ts">
 import TenantCreateForm from './_partials/TenantCreateForm.vue';
 
+import { getTenants } from '@/api/modules/provider/account';
 import { onMounted, ref } from 'vue';
 import { storeToRefs } from 'pinia';
 import { useRowDataStore } from '@/store/rowData';
@@ -52,10 +53,11 @@ const isLoading = ref(true);
 
 const fetchTenantInfo = async () => {
   try {
-    const query = JSON.stringify({});
-    const { data } = await retrieveTenants({ query });
+    // const query = JSON.stringify({});
+    // const { data } = await retrieveTenants({ query });
+    const { data } = await getTenants();
 
-    return data.value.data;
+    return JSON.parse(data.value.body);
   } catch (error) {
     console.log((error as Error).message);
 
@@ -89,130 +91,51 @@ const fetchAllowlist = async () => {
 
 onMounted(async () => {
   tenants.value = await fetchTenantInfo();
-  accounts.value = await fetchAccountInfo();
-  whitelist.value = await fetchAllowlist();
-
-  tenants.value.forEach((tenant: any) => {
-    // Allow Customer
-    if (whitelist.value.includes(tenant['companyEmail'])) {
-      tenant['allowCustomer'] = 'Whitelist';
-    } else if (tenant['companyEmail'].includes('mz')) {
-      tenant['allowCustomer'] = 'Megazone';
-    } else {
-      tenant['allowCustomer'] = 'Blacklist';
-    }
-    const currentTime = dayjs();
-    const endTime = dayjs(tenant['createDate']).add(6, 'hour');
-    // Add Report Success
-    if (tenant['diagopsReportURL'] !== undefined && tenant['diagopsReportURL'] !== '') {
-      tenant['diagopsReportSuccess'] = 'Success';
-    } else if (endTime.isBefore(currentTime)) {
-      tenant['diagopsReportSuccess'] = 'Fail';
-    } else {
-      tenant['diagopsReportSuccess'] = 'Pending';
-    }
-
-    // Add Account Info
-    accounts.value.forEach((account) => {
-      if (tenant['accountUrn'] === account['tenants'][0]?.accountUrn) {
-        data.value.push({ ...tenant, ...account });
-      }
-    });
-  });
-  tenants.value.forEach((tenant) => {});
 
   setTimeout(() => (isLoading.value = false), 100);
 });
 
 const columnDefs = [
   {
-    headerName: 'Company Info',
-    children: [
-      { headerName: 'Name', field: 'companyName' },
-      { headerName: 'Email', field: 'companyEmail', width: 180 },
-      // { headerName: 'Contact', field: 'companyContact', width: 180 },
-      // { headerName: 'Business Number', field: 'businessNumber', width: 180 },
-    ],
+    headerName: 'Company Registration Number',
+    field: 'companyRegistrationNumber',
   },
   {
-    headerName: 'Tenant Info',
-    children: [
-      { headerName: 'Name', field: 'tenantName' },
-      { headerName: 'Report Url', field: 'diagopsReportURL', width: 400, editable: true },
-      {
-        headerName: 'Report Status',
-        field: 'diagopsReportSuccess',
-        cellStyle: ({ data }: any) => {
-          if (data['diagopsReportSuccess'] === 'Pending') {
-            return { backgroundColor: '#999999', color: '#FFFFFF' };
-          } else if (data['diagopsReportSuccess'] === 'Success') {
-            return { backgroundColor: '#ADD8E6', color: '#FFFFFF' };
-          } else {
-            return { backgroundColor: '#FF6347', color: '#FFFFFF' };
-          }
-        },
-      },
-      // { headerName: 'Status', field: 'tenantStatus' },
-    ],
+    headerName: 'Company Name',
+    field: 'companyName',
   },
   {
-    headerName: 'AWS Info',
-    children: [
-      { headerName: 'Account Id', field: 'awsAccountId' },
-      { headerName: 'Regions', field: 'allowRegions' },
-    ],
+    headerName: 'Company Set Name',
+    field: 'companySetName',
   },
   {
-    headerName: 'Social User',
-    children: [
-      {
-        headerName: 'Company Type',
-        field: 'allowCustomer',
-        cellStyle: ({ data }: any) => {
-          if (data['allowCustomer'] === 'Megazone') {
-            return { backgroundColor: '#537FE7', color: '#FFFFFF' };
-          } else if (data['allowCustomer'] === 'Blacklist') {
-            return { backgroundColor: '#181823', color: '#FFFFFF' };
-          }
-        },
-      },
-      {
-        headerName: 'Social Display Name',
-        field: 'displayName',
-      },
-      { headerName: 'Social Email', field: 'email' },
-      { headerName: 'Register Date', field: 'registerDate' },
-    ],
+    headerName: 'Company Contact Name',
+    field: 'companyContactName',
   },
-  // {
-  //   headerName: 'Product Info',
-  //   children: [
-  //     {
-  //       headerName: 'Name',
-  //       field: 'productName',
-  //       valueFormatter: ({ data }: any) => data.products.at(0)?.productName ?? '-',
-  //     },
-  //   ],
-  // },
-  // {
-  //   headerName: 'Payment Info',
-  //   children: [
-  //     { headerName: 'Name', field: 'paymentName' },
-  //     { headerName: 'Start Date', field: 'paymentStartDate', width: 240 },
-  //   ],
-  // },
-  // {
-  //   headerName: '',
-  //   field: 'editTenant',
-  //   width: 80,
-  //   cellRenderer: HCellRendererBtnEdit,
-  // },
-  // {
-  //   headerName: '',
-  //   field: 'removeTenant',
-  //   width: 100,
-  //   cellRenderer: HCellRendererBtnRemove,
-  // },
+  {
+    headerName: 'Company Contact Phone',
+    field: 'companyContactPhone',
+  },
+  {
+    headerName: 'Company Contact Email',
+    field: 'companyContactEmail',
+  },
+  {
+    headerName: 'Company Industry Type',
+    field: 'companyIndustryType',
+  },
+  {
+    headerName: 'Company Financial Health',
+    field: 'companyFinancialHealth',
+  },
+  {
+    headerName: 'Report URLs',
+    field: 'reportUrls',
+    cellDataType: 'array',
+    valueFormatter: ({ data }: any) => {
+      return data.reportUrls.map((url: any) => url['reportUrl']);
+    },
+  },
 ];
 
 const gridApi = ref<GridApi>();

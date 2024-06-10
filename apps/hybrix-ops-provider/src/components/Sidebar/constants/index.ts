@@ -69,13 +69,13 @@ export const SIDEBAR_OPTIONS: SidebarOption[] = [
       {
         title: Service.MANAGEMANT_AWS_REGIONS,
         icon: icGear,
-        routeName: 'metadata-product',
+        routeName: 'metadata-region',
         subMenus: null,
       },
       {
         title: Service.MANAGEMANT_AWS_PRODUCTS,
         icon: icGear,
-        routeName: 'metadata-service',
+        routeName: 'metadata-product',
         subMenus: null,
       },
       {

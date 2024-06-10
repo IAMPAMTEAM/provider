@@ -42,6 +42,7 @@ import HDataTable from '@/components/HDataTable/HDataTable.vue';
 import { settings, columnDefs } from './datas';
 import type { CellValueChangedEvent, ICellRendererParams } from 'ag-grid-community';
 import { findAwsRegion, updateAwsRegion, uploadAwsRegion } from '@/api/modules/provider/aws-region';
+import { getRegions } from '@/api/modules/provider/account';
 import type { ColDef } from 'ag-grid-community';
 
 const gridRef = ref();
@@ -113,9 +114,11 @@ const cellChanged = async (e: CellValueChangedEvent | ICellRendererParams) => {
 // };
 
 const fetch = async () => {
-  const query = JSON.stringify({});
-  const res = await findAwsRegion({ query });
-  awsRegion.value = res.data.value.data;
+  // const query = JSON.stringify({});
+  // const res = await findAwsRegion({ query });
+  const { data } = await getRegions();
+  awsRegion.value = JSON.parse(data.value.body);
+  console.log(awsRegion.value);
 };
 const setColumns = async () => {
   awsRegionColumns.value = columnDefs;

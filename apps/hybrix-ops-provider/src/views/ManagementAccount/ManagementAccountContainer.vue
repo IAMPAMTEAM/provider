@@ -25,7 +25,7 @@
 import { onMounted, ref } from 'vue';
 import { storeToRefs } from 'pinia';
 import { useRowDataStore } from '@/store/rowData';
-import { retrieveAccounts } from '@/api/modules/provider/account';
+import { getAccounts, getSocialUsers } from '@/api/modules/provider/account';
 import { DEFAULT_COL_DEF } from '@/constants';
 
 import { AgGridVue } from 'ag-grid-vue3';
@@ -51,25 +51,8 @@ const isLoading = ref(true);
 
 const fetchAccountInfo = async () => {
   try {
-    /**
-     * 1. DB
-     */
-    const query = JSON.stringify({});
-    const { data } = await retrieveAccounts({ query });
-
-    return data.value.data;
-
-    /**
-     * 2. S3 Bucket JSON
-     */
-    // const { data } = await axios.get(
-    //   'https://email-form-images.s3.ap-northeast-2.amazonaws.com/home.accounts.json',
-    //   {
-    //     responseType: 'json',
-    //   }
-    // );
-
-    // return data;
+    const { data } = await getSocialUsers();
+    return JSON.parse(data.value.body);
   } catch (error) {
     console.log((error as Error).message);
 
@@ -94,13 +77,14 @@ const fetchAccountInfo = async () => {
 
 onMounted(async () => {
   accounts.value = await fetchAccountInfo();
+
   setTimeout(() => (isLoading.value = false), 100);
 });
 
 const columnDefs = [
   {
     headerName: 'Profile Image',
-    field: 'profileImg',
+    field: 'profileImage',
     sortable: false,
     cellRenderer: HCellRendererProfileImg,
   },
@@ -112,36 +96,36 @@ const columnDefs = [
 
   //   valueFormatter: ({ data }: any) => data.tenants.at(0)?.tenantName ?? '-',
   // },
-  { headerName: 'Social Email', field: 'email' },
+  { headerName: 'Social Email', field: 'socialEmail' },
   {
-    headerName: 'Account Status',
-    field: 'accountStatus',
-    sortable: false,
-    valueFormatter: ({ data }: any) => {
-      if (!data['accountStatus']['emailVerified'] && !data['accountStatus']['getStarted']) {
-        return 'loggedIn';
-      }
-      if (!data['accountStatus']['getStarted'] && data['accountStatus']['emailVerified']) {
-        return 'emailVerified';
-      }
-      if (data['accountStatus']['getStarted']) {
-        return 'getStarted';
-      }
-    },
-    cellStyle: ({ data }: any) => {
-      if (!data['accountStatus']['emailVerified'] && !data['accountStatus']['getStarted']) {
-        return { backgroundColor: '#EC5858', color: '#FFFFFF' };
-      }
-      if (!data['accountStatus']['getStarted'] && data['accountStatus']['emailVerified']) {
-        return { backgroundColor: '#FFB830', color: '#FFFFFF' };
-      }
-      if (data['accountStatus']['getStarted']) {
-        return { backgroundColor: '#3DB2FF', color: '#FFFFFF' };
-      }
-    },
+    headerName: 'Email Status',
+    field: 'emailStatus',
+    // sortable: false,
+    // valueFormatter: ({ data }: any) => {
+    //   if (!data['accountStatus']['emailVerified'] && !data['accountStatus']['getStarted']) {
+    //     return 'loggedIn';
+    //   }
+    //   if (!data['accountStatus']['getStarted'] && data['accountStatus']['emailVerified']) {
+    //     return 'emailVerified';
+    //   }
+    //   if (data['accountStatus']['getStarted']) {
+    //     return 'getStarted';
+    //   }
+    // },
+    // cellStyle: ({ data }: any) => {
+    //   if (!data['accountStatus']['emailVerified'] && !data['accountStatus']['getStarted']) {
+    //     return { backgroundColor: '#EC5858', color: '#FFFFFF' };
+    //   }
+    //   if (!data['accountStatus']['getStarted'] && data['accountStatus']['emailVerified']) {
+    //     return { backgroundColor: '#FFB830', color: '#FFFFFF' };
+    //   }
+    //   if (data['accountStatus']['getStarted']) {
+    //     return { backgroundColor: '#3DB2FF', color: '#FFFFFF' };
+    //   }
+    // },
   },
+  { headerName: 'Login IP Address', field: 'loginIpaddress' },
   { headerName: 'Login Location', field: 'loginLocation' },
-  { headerName: 'Last Login Date', field: 'lastLoginDate' },
   // {
   //   headerName: '',
   //   field: 'editAccount',
@@ -174,10 +158,6 @@ const cellChanged = async (e: CellValueChangedEvent | ICellRendererParams) => {
   if (!e.column) return;
 
   console.log(e);
-
-  // axios
-  //   .put('https://email-form-images.s3.ap-northeast-2.amazonaws.com/home.accounts.json')
-  //   .then((rsp) => {});
 };
 
 const setColumns = async () => {

@@ -1,0 +1,24 @@
+{
+  "name": "@hybrix/styles",
+  "version": "1.0.0",
+  "private": true,
+  "description": "CSS files for Hybrix Ops",
+  "exports": {
+    "./main.css": {
+      "import": "./main.css",
+      "require": "./main.css"
+    },
+    "./reset.css": {
+      "import": "./src/reset.css",
+      "require": "./src/reset.css"
+    },
+    "./utilities.css": {
+      "import": "./src/utilities.css",
+      "require": "./src/utilities.css"
+    },
+    "./variables.css": {
+      "import": "./src/variables.css",
+      "require": "./src/variables.css"
+    }
+  }
+}

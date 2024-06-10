@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="16" height="17.875" viewBox="0 0 16 17.875">
+  <defs>
+    <clipPath id="clip-path">
+      <rect id="사각형_129" width="16" height="17.875" fill="none"/>
+    </clipPath>
+  </defs>
+  <g id="delete_btn" transform="translate(0 0)">
+    <g transform="translate(0 0)" clip-path="url(#clip-path)">
+      <rect width="15.002" height="2.532" rx="1" transform="translate(0.499 2.187)" fill="none" stroke="#333" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+      <rect width="3.399" height="1.688" transform="translate(6.301 0.499)" fill="none" stroke="#333" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+      <path d="M14.942,20.129a2.257,2.257,0,0,1-2.194,1.986H5.873A2.257,2.257,0,0,1,3.68,20.129L2.617,9.461a0,0,0,0,1,0,0H16a0,0,0,0,1,0,0Z" transform="translate(-1.311 -4.739)" fill="none" stroke="#333" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+      <line y2="7.525" transform="translate(7.949 7.285)" fill="none" stroke="#333" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+      <line x2="0.967" y2="7.525" transform="translate(4.118 7.285)" fill="none" stroke="#333" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+      <line x1="0.967" y2="7.525" transform="translate(10.813 7.285)" fill="none" stroke="#333" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+    </g>
+  </g>
+</svg>

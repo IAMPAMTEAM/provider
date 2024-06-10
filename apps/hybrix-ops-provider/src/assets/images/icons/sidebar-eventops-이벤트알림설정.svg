@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+  <g id="ic-line-이벤트알림설정" transform="translate(-2444.125 -155.436)">
+    <g id="line">
+      <path id="패스_655" data-name="패스 655" d="M2466.059,169.035l-.823-1a2.373,2.373,0,0,1-.475-2.047,3.19,3.19,0,0,0,.079-.709,3.585,3.585,0,0,0-7.158,0,3.181,3.181,0,0,0,.08.708,2.375,2.375,0,0,1-.475,2.048l-.824,1a.256.256,0,0,0,.212.415h9.172A.256.256,0,0,0,2466.059,169.035Z" fill="none" stroke="#666" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+      <path id="패스_656" data-name="패스 656" d="M2462.541,171.657a1.31,1.31,0,0,1-2.56,0" fill="none" stroke="#666" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+      <path id="패스_657" data-name="패스 657" d="M2461.246,175.457v1.963h-15.112V157.452h15.112v1.99" fill="none" stroke="#666" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+      <line id="선_447" data-name="선 447" x2="4.046" transform="translate(2449.081 160.404)" fill="none" stroke="#666" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+      <line id="선_448" data-name="선 448" x2="8.716" transform="translate(2449.081 163.924)" fill="none" stroke="#666" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+      <line id="선_449" data-name="선 449" x2="8.559" transform="translate(2449.081 167.443)" fill="none" stroke="#666" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+      <line id="선_450" data-name="선 450" x2="7.324" transform="translate(2449.081 170.963)" fill="none" stroke="#666" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+      <line id="선_451" data-name="선 451" x2="4.215" transform="translate(2449.081 174.482)" fill="none" stroke="#666" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+    </g>
+  </g>
+</svg>

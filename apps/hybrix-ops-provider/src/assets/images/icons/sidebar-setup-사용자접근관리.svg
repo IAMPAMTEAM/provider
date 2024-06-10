@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+  <g id="ic-line-사용자접근관리" transform="translate(-2684.488 -155.436)">
+    <g id="line">
+      <circle id="타원_191" data-name="타원 191" cx="4" cy="4" r="4" transform="translate(2691.906 156.852)" fill="none" stroke="#666" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+      <path id="패스_660" data-name="패스 660" d="M2685.905,176.852a10,10,0,0,1,14.843-8.751" fill="none" stroke="#666" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+      <circle id="타원_192" data-name="타원 192" cx="4.166" cy="4.166" r="4.166" transform="translate(2698.738 169.687)" fill="none" stroke="#666" stroke-width="1"/>
+      <path id="패스_661" data-name="패스 661" d="M2701,173.923l1.531,1.726,2.272-3.321" fill="none" stroke="#666" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+    </g>
+  </g>
+</svg>

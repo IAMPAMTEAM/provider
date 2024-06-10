@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20">
+  <g id="ic-time" transform="translate(0 0)">
+    <g id="그룹_981" data-name="그룹 981" transform="translate(0.65 0.651)">
+      <line id="선_505" data-name="선 505" x1="3.021" y1="2.678" transform="translate(9 9)" fill="none" stroke="#666" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+      <line id="선_506" data-name="선 506" y2="6" transform="translate(8.85 2.85)" fill="none" stroke="#666" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+      <path id="패스_1063" data-name="패스 1063" d="M17.8,9.15A8.65,8.65,0,1,1,9.15.5,8.651,8.651,0,0,1,17.8,9.15Z" transform="translate(-0.15 -0.15)" fill="none" stroke="#666" stroke-width="1"/>
+    </g>
+    <rect id="사각형_1341" data-name="사각형 1341" width="20" height="20" transform="translate(0 0)" fill="none"/>
+  </g>
+</svg>

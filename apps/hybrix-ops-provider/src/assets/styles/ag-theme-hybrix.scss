@@ -1,0 +1,249 @@
+:root {
+  .ag-theme-hybrix {
+    --ag-alpine-active-color: #ed8c00;
+    --ag-background-color: #fff;
+    --ag-border-color: #ccc;
+    --ag-borders: solid 1px;
+    --ag-borders-side-button: none;
+    --ag-card-shadow: 0 1px 4px 1px rgba(186, 191, 199, 0.4);
+    --ag-cell-horizontal-padding: calc(var(--ag-grid-size) * 3);
+    --ag-cell-widget-spacing: calc(var(--ag-grid-size) * 2);
+    --ag-checkbox-background-color: var(--ag-background-color);
+    --ag-checkbox-checked-color: var(--ag-alpine-active-color);
+    --ag-checkbox-unchecked-color: #999;
+    --ag-chip-background-color: rgba(24, 29, 31, 0.07);
+    --ag-column-hover-color: rgba(33, 150, 243, 0.1);
+    --ag-column-select-indent-size: var(--ag-icon-size);
+    --ag-control-panel-background-color: #f8f8f8;
+    --ag-disabled-foreground-color: rgba(24, 29, 31, 0.5);
+    --ag-font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen-Sans, Ubuntu, Cantarell, 'Helvetica Neue', sans-serif;
+    --ag-font-size: 13px;
+    --ag-foreground-color: #181d1f;
+    --ag-grid-size: 6px;
+    --ag-header-background-color: #f7f7f7;
+    --ag-header-column-resize-handle-display: block;
+    --ag-header-column-resize-handle-height: 30%;
+    --ag-header-column-resize-handle-width: 2px;
+    --ag-header-height: calc(var(--ag-grid-size) * 8);
+    --ag-icon-font-family: agGridAlpine;
+    --ag-icon-size: 16px;
+    --ag-input-border-color-invalid: var(--ag-invalid-color);
+    --ag-input-border-color: var(--ag-border-color);
+    --ag-input-disabled-background-color: rgba(186, 191, 199, 0.15);
+    --ag-input-disabled-border-color: rgba(186, 191, 199, 0.3);
+    --ag-input-focus-border-color: rgba(32, 41, 48, 0.4);
+    --ag-input-focus-box-shadow: 0 0 2px 0.1rem var(--ag-input-focus-border-color);
+    --ag-invalid-color: #e02525;
+    --ag-list-item-height: calc(var(--ag-grid-size) * 4);
+    --ag-odd-row-background-color: #fcfcfc;
+    --ag-popup-shadow: var(--ag-card-shadow);
+    --ag-range-selection-background-color-2: rgba(33, 150, 243, 0.36);
+    --ag-range-selection-background-color-3: rgba(33, 150, 243, 0.49);
+    --ag-range-selection-background-color-4: rgba(33, 150, 243, 0.59);
+    --ag-range-selection-background-color: rgba(33, 150, 243, 0.2);
+    --ag-range-selection-border-color: var(--ag-alpine-active-color);
+    --ag-row-height: calc(var(--ag-grid-size) * 7);
+    --ag-row-hover-color: #ed8c0020;
+    --ag-secondary-border-color: #dde2eb;
+    --ag-secondary-foreground-color: var(--ag-foreground-color);
+    --ag-selected-row-background-color: #ed8c00;
+    --ag-selected-tab-underline-color: var(--ag-alpine-active-color);
+    --ag-selected-tab-underline-transition-speed: 0.3s;
+    --ag-selected-tab-underline-width: 2px;
+    --ag-set-filter-indent-size: var(--ag-icon-size);
+    --ag-side-bar-panel-width: 250px;
+    --ag-side-button-selected-background-color: transparent;
+    --ag-subheader-background-color: #fff;
+    --ag-tab-min-width: 240px;
+    --ag-toggle-button-height: 18px;
+    --ag-toggle-button-width: 28px;
+    --ag-tooltip-background-color: #f8f8f8;
+    --ag-widget-container-horizontal-padding: calc(var(--ag-grid-size) * 2);
+    --ag-widget-container-vertical-padding: calc(var(--ag-grid-size) * 2);
+    --ag-widget-vertical-spacing: calc(var(--ag-grid-size) * 1.5);
+
+    .ag {
+      &-header {
+        &-cell {
+          border: 1px solid #fff;
+          background: #ebebeb;
+          font-weight: bold;
+          
+          &.tag {
+            color: #fff;
+            background: #6667ab !important;
+            &.ag-header-active {
+              &:hover {
+                color: #fff;
+                background: #6667ab !important;
+              }
+            }
+          }
+          &.rule {
+            color: #fff;
+            background: #ed8c00 !important;
+
+            &.ag-header-active {
+              &:hover {
+                color: #fff;
+                background: #ed8c00 !important;
+              }
+            }
+          }
+        }
+        &-group-cell {
+          border: 1px solid #fff;
+          font-weight: bold;
+        }
+      }
+      &-cell {
+        color: #333;
+        font-weight: normal;
+      }
+      &-row {
+        &-selected {
+          .ag-cell {
+            background: #ed8c00;
+            color: #fff;
+            &-inline-editing {
+              color: #333;
+            }
+          .text-input.selected .q-field__messages {
+            color: white;
+          }
+          }
+          &.default {
+            .ag-cell {
+              background: #ed8c00 !important;
+            }
+          }
+        }
+
+        &.warning {
+          .ag-cell {
+            background: #b5c201cc;
+            color: #fff;
+          }
+        }
+        &.critical {
+          .ag-cell {
+            background: #c20101cc;
+            color: #fff;
+          }
+        }
+
+        &.default {
+          .ag-cell {
+            background: #f7f7f7;
+          }
+        }
+      }
+      &-paging-panel {
+        border-bottom: 1px solid;
+        border-bottom-color: var(--ag-border-color);
+      }
+    }
+
+    .ag-root-wrapper {
+      border: none !important;
+      border-radius: 10px;
+    }
+
+    .select {
+      width: 100%;
+    }
+
+    .security-check {
+      display: flex;
+      height: 100%;
+      align-items: center;
+      justify-content: space-evenly;
+      min-width: 140px;
+
+      &-date {
+        width: 90px;
+        padding-right: 15px;
+      }
+
+      &-button {
+        display: flex;
+
+        align-items: center;
+        justify-content: center;
+
+        width: 48px;
+        min-width: 48px;
+        height: 20px;
+        color: var(--color-purple-deep);
+        border-radius: 5px;
+        border: 1px solid var(--color-purple-deep);
+
+        cursor: pointer;
+      }
+    }
+
+    .object-cell {
+      cursor: pointer;
+
+      &-item {
+        width: 500px;
+        height: 200px;
+        background-color: white;
+      }
+    }
+
+    .cell {
+      &-dialog {
+        width: 500px;
+        height: 200px;
+      }
+
+      &-span {
+        display: flex !important;
+        align-items: center;
+        background-color: #fcfcfc;
+        border-bottom: 1px solid #dde2eb;
+      }
+
+      &-date {
+        width: 100%;
+        height: 100%;
+      }
+
+      &-checkbox {
+        text-align: center;
+      }
+    }
+  }
+
+  // q-select를 사용한 setup Criteria의 SeverityCell 에서 사용.
+
+  .q-item.select-option {
+    cursor: pointer;
+    &:hover {
+      background-color: #f7f7f7;
+    }
+  }
+  .q-item__section.warning {
+    color:#cfbe54;
+    text-transform: uppercase;
+    }
+        
+    
+  .q-item__section.critical {
+    color: #c22626;
+    text-transform: uppercase;
+  }
+
+  .q-item__section.Working {
+    color: var(--color-green);
+  }
+  .q-item__section.Off {
+    color: #cfbe54;
+  }
+
+  .q-item__section.Leaving {
+    color: #c22626;
+  }
+  
+}

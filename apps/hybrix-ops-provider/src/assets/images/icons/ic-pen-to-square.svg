@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="15" height="15.077" viewBox="0 0 15 15.077">
+  <defs>
+    <clipPath id="clip-path">
+      <rect id="사각형_301" data-name="사각형 301" width="15" height="15.077" transform="translate(0 0)" fill="none" stroke="#fff" stroke-width="1"/>
+    </clipPath>
+  </defs>
+  <g id="NewChat" transform="translate(0 0)" clip-path="url(#clip-path)">
+    <g id="그룹_257" data-name="그룹 257" transform="translate(0.434 0.434)">
+      <path id="패스_350" data-name="패스 350" d="M12.418,9.1v3.355a2.612,2.612,0,0,1-2.6,2.6H3.1a2.612,2.612,0,0,1-2.6-2.6V5.744a2.612,2.612,0,0,1,2.6-2.6H6.845" transform="translate(-0.5 -0.848)" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+      <path id="패스_351" data-name="패스 351" d="M13.178.5,11.677,2l-4.24,4.24a.839.839,0,0,0-.184.279L5.868,9.973,9.32,8.588A.838.838,0,0,0,9.6,8.4l4.239-4.24,1.5-1.5Z" transform="translate(-1.209 -0.5)" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+      <line id="선_216" data-name="선 216" x2="2.162" y2="2.162" transform="translate(10.468 1.502)" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+      <line id="선_217" data-name="선 217" x1="1.733" y1="1.733" transform="translate(6.307 6.062)" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+    </g>
+  </g>
+</svg>

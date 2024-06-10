@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+  <g id="ic-line-네트워크구성관리" transform="translate(-2205.771 -155.436)">
+    <g id="line">
+      <path id="cloud" d="M2223.767,174.857a4,4,0,0,0,1.974-7.47,3,3,0,0,0-4.016-3.352,5.99,5.99,0,1,0-11.849,1.749,5,5,0,0,0,1.9,8.971" fill="none" stroke="#666" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+      <circle id="타원_182" data-name="타원 182" cx="1.016" cy="1.016" r="1.016" transform="translate(2216.746 170.828)" fill="none" stroke="#666" stroke-width="1"/>
+      <circle id="타원_183" data-name="타원 183" cx="1.016" cy="1.016" r="1.016" transform="translate(2216.746 167.687)" fill="none" stroke="#666" stroke-width="1"/>
+      <circle id="타원_184" data-name="타원 184" cx="1.016" cy="1.016" r="1.016" transform="translate(2214.715 173.989)" fill="none" stroke="#666" stroke-width="1"/>
+      <circle id="타원_185" data-name="타원 185" cx="1.016" cy="1.016" r="1.016" transform="translate(2218.777 173.989)" fill="none" stroke="#666" stroke-width="1"/>
+      <circle id="타원_186" data-name="타원 186" cx="1.016" cy="1.016" r="1.016" transform="translate(2219.906 170.098)" fill="none" stroke="#666" stroke-width="1"/>
+      <circle id="타원_187" data-name="타원 187" cx="1.016" cy="1.016" r="1.016" transform="translate(2213.605 170.098)" fill="none" stroke="#666" stroke-width="1"/>
+      <line id="선_441" data-name="선 441" y2="1.113" transform="translate(2217.771 169.717)" fill="none" stroke="#666" stroke-width="1"/>
+      <line id="선_442" data-name="선 442" x2="1.16" y2="0.277" transform="translate(2215.609 171.35)" fill="none" stroke="#666" stroke-width="1"/>
+      <line id="선_443" data-name="선 443" y1="1.443" x2="0.948" transform="translate(2216.287 172.712)" fill="none" stroke="#666" stroke-width="1"/>
+      <line id="선_444" data-name="선 444" x1="0.93" y1="1.455" transform="translate(2218.316 172.695)" fill="none" stroke="#666" stroke-width="1"/>
+      <line id="선_445" data-name="선 445" x1="1.179" y2="0.285" transform="translate(2218.756 171.352)" fill="none" stroke="#666" stroke-width="1"/>
+    </g>
+  </g>
+</svg>

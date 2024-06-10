@@ -1,0 +1,6 @@
+{
+    "name": "@hybrix/eslint-config-vue",
+    "version": "1.0.0",
+    "description": "Eslint Config for Vue Projects",
+    "main": "index.js"
+}

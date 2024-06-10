@@ -1,0 +1,31 @@
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  width="17"
+  height="17.414"
+  viewBox="0 0 17 17.414"
+>
+  <g id="change_btn" transform="translate(-113 -246.793)">
+    <path
+      id="패스_140"
+      data-name="패스 140"
+      d="M.5,5.833h16L11.165.5"
+      transform="translate(113 247)"
+      fill="none"
+      stroke="#333"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+      stroke-width="1"
+    />
+    <path
+      id="패스_141"
+      data-name="패스 141"
+      d="M0,5.333H16L10.665,0"
+      transform="translate(129.5 263.5) rotate(180)"
+      fill="none"
+      stroke="#333"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+      stroke-width="1"
+    />
+  </g>
+</svg>

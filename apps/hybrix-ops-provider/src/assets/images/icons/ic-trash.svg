@@ -1,0 +1,17 @@
+<svg id="ic_Trash" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="20" height="20" viewBox="0 0 20 20">
+  <defs>
+    <clipPath id="clip-path">
+      <rect id="사각형_318" data-name="사각형 318" width="20" height="20" fill="none"/>
+    </clipPath>
+  </defs>
+  <g id="그룹_264" data-name="그룹 264" clip-path="url(#clip-path)">
+    <g id="그룹_276" data-name="그룹 276">
+      <path id="사각형_316" data-name="사각형 316" d="M.455,0H13.214a.454.454,0,0,1,.454.454v1.4a.454.454,0,0,1-.454.454H.455A.455.455,0,0,1,0,1.851V.455A.455.455,0,0,1,.455,0Z" transform="translate(3.167 3.85)" fill="none" stroke="#666" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+      <rect id="사각형_317" data-name="사각형 317" width="3.096" height="1.538" transform="translate(8.452 2.311)" fill="none" stroke="#666" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+      <path id="패스_355" data-name="패스 355" d="M15.148,15.7a2.261,2.261,0,0,1-2.2,1.99H7.05a2.262,2.262,0,0,1-2.2-1.99L3.9,6.16l0,0H16.095l0,0Z" fill="none" stroke="#666" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+      <line id="선_220" data-name="선 220" y2="6.855" transform="translate(9.954 8.494)" fill="none" stroke="#666" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+      <line id="선_221" data-name="선 221" x2="0.881" y2="6.855" transform="translate(6.463 8.494)" fill="none" stroke="#666" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+      <line id="선_222" data-name="선 222" x1="0.881" y2="6.855" transform="translate(12.563 8.494)" fill="none" stroke="#666" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+    </g>
+  </g>
+</svg>

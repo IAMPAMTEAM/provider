@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48">
+  <defs>
+    <style>
+      .cls-1,
+      .cls-2 {
+        fill: none;
+      }
+      .cls-1 {
+        stroke: #333333;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+        stroke-width: 2px;
+      }
+    </style>
+  </defs>
+  <g id="레이어_2" data-name="레이어 2">
+    <g id="Web_icon_UI" data-name="Web icon UI">
+      <g id="Firewalls">
+        <g id="Security">
+          <path
+            class="cls-1"
+            d="M24,4,7.42,9.47V22.34A20.37,20.37,0,0,0,17,39.64L24,44l7-4.36a20.37,20.37,0,0,0,9.59-17.3V9.47Z"
+          />
+          <path
+            class="cls-1"
+            d="M24,13.24l-8.92,2.94v6.93a11,11,0,0,0,5.16,9.3L24,34.76l3.76-2.35a11,11,0,0,0,5.16-9.3V16.18Z"
+          />
+        </g>
+      </g>
+      <rect class="cls-2" width="48" height="48" />
+    </g>
+  </g>
+</svg>

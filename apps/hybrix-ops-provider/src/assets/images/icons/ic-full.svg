@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="13.414" height="13.414" viewBox="0 0 13.414 13.414">
+  <g id="full_icon" transform="translate(0.707 0.707)">
+    <line id="선_297" data-name="선 297" x1="12" y2="12" fill="none" stroke="#999" stroke-linecap="round" stroke-width="1"/>
+    <path id="패스_467" data-name="패스 467" d="M0,7H7V0" transform="translate(7 4.999) rotate(90)" fill="none" stroke="#999" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+    <path id="패스_468" data-name="패스 468" d="M0,7H7V0" transform="translate(5 7) rotate(-90)" fill="none" stroke="#999" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+  </g>
+</svg>

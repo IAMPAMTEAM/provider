@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="48" height="48" viewBox="0 0 48 48">
+  <g>
+    <path d="M20.26,9.31A7.757,7.757,0,0,0,9.482,19.365L1,27.933v3.716H4.643l.892-.887v-1.8l1.829-1.829H9.178l4.028-4.007a7.718,7.718,0,0,0,3.323.755q.381,0,.753-.036" fill="none" stroke="#999" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+    <path d="M21.747,9.31a7.76,7.76,0,0,0-3.433,15.006l.061,12.056L21,39l2.576-2.575,0-1.259L22.312,33.9V31.309l1.283-1.283.014-5.681a7.886,7.886,0,0,0,1.114-.5" fill="none" stroke="#999" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+    <path d="M17.707,16.121a7.753,7.753,0,0,0,11.009,7.047l8.568,8.481H41V28.006l-.887-.891h-1.8l-1.829-1.83V23.472l-4.007-4.028a7.761,7.761,0,1,0-14.774-3.323Z" fill="none" stroke="#999" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+    <circle cx="1.739" cy="1.739" r="1.739" transform="translate(21.258 11.908)" fill="none" stroke="#999" stroke-width="2"/>
+    <path d="M14.8,8.551a6.324,6.324,0,1,1,6.462,5.09" fill="none" stroke="#999" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+  </g>
+</svg>

@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+  <g id="ic-line-보안자원관리" transform="translate(-1967.418 -155.436)">
+    <g id="line">
+      <rect id="사각형_1089" data-name="사각형 1089" width="9.267" height="5.999" rx="1.357" transform="translate(1980.893 172.437)" fill="none" stroke="#666" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+      <path id="사각형_1090" data-name="사각형 1090" d="M1.571,0h.857A1.571,1.571,0,0,1,4,1.571V4A0,0,0,0,1,4,4H0A0,0,0,0,1,0,4V1.571A1.571,1.571,0,0,1,1.571,0Z" transform="translate(1983.576 168.436)" fill="none" stroke="#666" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+      <circle id="타원_173" data-name="타원 173" cx="0.714" cy="0.714" r="0.714" transform="translate(1984.813 174.356)" fill="none" stroke="#666" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+      <line id="선_421" data-name="선 421" y2="0.732" transform="translate(1985.525 175.784)" fill="none" stroke="#666" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+      <path id="패스_635" data-name="패스 635" d="M1986,166.436v-5l-8.66-5-8.66,5v10l8.66,5,1.732-1" fill="none" stroke="#666" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+      <line id="선_422" data-name="선 422" x2="8.66" y2="5" transform="translate(1968.676 161.436)" fill="none" stroke="#666" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+      <line id="선_423" data-name="선 423" y2="10" transform="translate(1977.338 166.436)" fill="none" stroke="#666" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+      <line id="선_424" data-name="선 424" x1="8.66" y2="5" transform="translate(1977.338 161.436)" fill="none" stroke="#666" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+    </g>
+  </g>
+</svg>

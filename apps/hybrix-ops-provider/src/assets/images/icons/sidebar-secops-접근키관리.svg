@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+  <g id="ic-line-접근키관리" transform="translate(-1967.418 -305.003)">
+    <g id="line">
+      <path id="패스_642" data-name="패스 642" d="M1979.048,311.658a3.78,3.78,0,0,0-.631-.276,3.878,3.878,0,0,0-4.758,5.3l-4.241,4.284v1.858h1.822l.446-.444v-.9l.914-.914h.907l2.014-2a3.853,3.853,0,0,0,1.662.378c.127,0,.252-.007.376-.019" fill="none" stroke="#666" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+      <path id="패스_643" data-name="패스 643" d="M1979.792,311.658a3.88,3.88,0,0,0-1.717,7.5l.031,6.028,1.314,1.314,1.288-1.288v-.629l-.634-.635v-1.293l.641-.642.007-2.841a3.943,3.943,0,0,0,.557-.247" fill="none" stroke="#666" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+      <path id="패스_644" data-name="패스 644" d="M1977.772,315.063a3.875,3.875,0,0,0,5.5,3.524l4.284,4.241h1.858v-1.822l-.443-.446h-.9l-.915-.914v-.907l-2-2.014a3.881,3.881,0,1,0-7.387-1.662Z" fill="none" stroke="#666" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+      <circle id="타원_175" data-name="타원 175" cx="0.87" cy="0.87" r="0.87" transform="translate(1979.547 312.957)" fill="none" stroke="#666" stroke-width="1"/>
+      <path id="패스_645" data-name="패스 645" d="M1976.317,311.278a3.161,3.161,0,1,1,3.23,2.546" fill="none" stroke="#666" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+    </g>
+  </g>
+</svg>

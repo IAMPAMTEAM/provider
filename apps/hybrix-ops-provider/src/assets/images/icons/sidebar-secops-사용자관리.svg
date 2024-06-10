@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+  <g id="ic-line-사용자관리" transform="translate(-24 -247)">
+    <g id="line" transform="translate(-1943.418 139.335)">
+      <circle id="타원_172" data-name="타원 172" cx="4" cy="4" r="4" transform="translate(1974.835 109.496)" fill="none" stroke="#666" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+      <path id="패스_634" data-name="패스 634" d="M1968.835,129.5a10,10,0,0,1,14.842-8.752" fill="none" stroke="#666" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+      <path id="cloud" d="M1989.158,126.718a1.286,1.286,0,0,0,.021-.226,1.251,1.251,0,0,0-1.7-1.171,2.5,2.5,0,0,0-4.974.338,2.409,2.409,0,0,0,.034.391,2.085,2.085,0,0,0,1.212,3.783h4.58a1.666,1.666,0,0,0,.823-3.115Z" fill="none" stroke="#666" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+    </g>
+  </g>
+</svg>

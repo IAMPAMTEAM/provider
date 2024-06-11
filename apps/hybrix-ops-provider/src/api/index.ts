@@ -40,5 +40,3 @@ export const providerSvgIconInstance = createInstance('HOME', 'provider/svg-icon
 /*----- Monitor -----*/
 
 export const montiorInstance = createInstance('MONITORING', '');
-
-// export const AWSAccountInstance = createAloneInstance('awsaccount');

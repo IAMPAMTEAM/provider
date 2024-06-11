@@ -11,10 +11,10 @@
       @grid-ready="onGridReady"
     />
 
-    <div class="management-tenants__btn-create">
+    <!-- <div class="management-tenants__btn-create">
       <q-btn label="Create" color="green" @click="toggleShow" />
       <TenantCreateForm :show="show" @add="createTenant" @close="toggleShow" />
-    </div>
+    </div> -->
 
     <Transition>
       <div v-if="isLoading" class="management-tenants-cloak">
@@ -40,6 +40,7 @@ import type { GridReadyEvent, GridApi, ColumnApi } from 'ag-grid-community';
 import { retrieveAccounts } from '@/api/modules/provider/account';
 import { retrieveAllowlist } from '@/api/modules/provider/allowlist';
 import dayjs from 'dayjs';
+import type { ColDef } from 'ag-grid-community';
 
 const router = useRouter();
 
@@ -67,26 +68,32 @@ onMounted(async () => {
   setTimeout(() => (isLoading.value = false), 100);
 });
 
-const columnDefs = [
+const columnDefs: ColDef[] = [
   {
     headerName: 'AWS Account',
     field: 'awsAccount',
+    editable: true,
+    minWidth: 300,
   },
   {
     headerName: 'AWS Account Name',
     field: 'awsAccountName',
+    minWidth: 290,
   },
   {
     headerName: 'AWS Account Full Name',
     field: 'awsAccountFullName',
+    minWidth: 320,
   },
   {
     headerName: 'Company Name',
     field: 'companyName',
+    minWidth: 280,
   },
   {
     headerName: 'AWS Account Type',
     field: 'awsAccountType',
+    minWidth: 320,
   },
 ];
 

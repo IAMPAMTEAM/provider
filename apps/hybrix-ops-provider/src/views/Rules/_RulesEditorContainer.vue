@@ -20,7 +20,7 @@
 </template>
 
 <script setup lang="ts">
-import { getRules, insertRuleTag, getRuleTagColumn } from '@/api/modules/home/rules';
+// import { getRules, insertRuleTag, getRuleTagColumn } from '@/api/modules/home/rules';
 import HDataTable from '@/components/HDataTable/HDataTable.vue';
 import { ref } from 'vue';
 import type { Rule, RuleTagType } from './types';
@@ -97,27 +97,27 @@ const onRowSelected = (e: RowSelectedEvent) => {
 };
 
 const onInsertRuleTag = async () => {
-  await insertRuleTag({
-    ruleTagName: tagName.value,
-    ruleTagType: tagType.value,
-  });
+  // await insertRuleTag({
+  //   ruleTagName: tagName.value,
+  //   ruleTagType: tagType.value,
+  // });
   setTagColumns();
 };
 
 const setTagColumns = async () => {
-  const tagColumns: RuleTagType[] = (await getRuleTagColumn()).data.value;
-  gridSettings.value.detailCellRendererParams.detailGridOptions.columnDefs = tagColumns.map(
-    (tagColumns) => ({
-      field: tagColumns.ruleTagName,
-      editable: true,
-    })
-  );
+  // const tagColumns: RuleTagType[] = (await getRuleTagColumn()).data.value;
+  // gridSettings.value.detailCellRendererParams.detailGridOptions.columnDefs = tagColumns.map(
+  //   (tagColumns) => ({
+  //     field: tagColumns.ruleTagName,
+  //     editable: true,
+  //   })
+  // );
 };
 
 onMounted(async () => {
   await setTagColumns();
-  const res = await getRules();
-  rules.value = res.data.value;
+  // const res = await getRules();
+  // rules.value = res.data.value;
 });
 </script>
 

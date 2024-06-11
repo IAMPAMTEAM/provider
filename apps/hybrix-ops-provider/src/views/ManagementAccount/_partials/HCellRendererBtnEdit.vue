@@ -46,10 +46,9 @@ import { useRowDataStore } from '@/store/rowData';
 import { updateAccount } from '@/api/modules/provider/account';
 import { updateProviderAccount } from '@/api/modules/provider/provider-account';
 import { updateTenant } from '@/api/modules/provider/tenant';
-import { TENANT_STATUS_OPTIONS } from '@/constants';
 import { ROW_DATA, type EditRowData } from '@/types';
 import type { CellEvent } from 'ag-grid-community';
-import { onMounted } from 'vue';
+import { updateSocialUser } from '@/api/modules/provider/account';
 
 const rowDataStore = useRowDataStore();
 
@@ -95,15 +94,25 @@ const saveRowData = async () => {
   // const urn = data?.urn.urn;
   const field = colDef.field as EditRowData;
 
-  console.log(field);
+  // const {displayName, socialEmail} = data
+
+  const displayName = state.displayName;
+  const socialEmail = state.socialEmail;
+
+  const res = {
+    ...data,
+    displayName,
+    socialEmail,
+  };
+
+  await updateSocialUser({ data: res });
+
+  // await EditFunctionMap[field]({ data: res });
+  // rowDataStore.updateRowData(EditRowDataMap[field], rowIndex, data, state)
 
   // await EditFunctionMap[field]({ urn, data: state });
   // rowDataStore.updateRowData(EditRowDataMap[field], rowIndex, data, state);
 };
-
-onMounted(() => {
-  console.log(props.params.data);
-});
 </script>
 
 <style lang="scss">

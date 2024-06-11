@@ -58,6 +58,30 @@ export const getSocialUsers = async () => {
   );
 };
 
+export const updateSocialUser = async ({
+  data,
+}: {
+  data: {
+    profileImage: string;
+    displayName: string;
+    socialEmail: string;
+    emailStatus: string;
+    loginIpaddress: string;
+    loginLocation: string;
+    lastLogin: string;
+  };
+}) => {
+  console.log(data);
+  return useAxios(
+    `/${data.socialEmail}`,
+    {
+      method: 'PUT',
+      data,
+    },
+    awsSocialUsersInstance
+  );
+};
+
 export const getTenants = async () => {
   return useAxios(
     '/',

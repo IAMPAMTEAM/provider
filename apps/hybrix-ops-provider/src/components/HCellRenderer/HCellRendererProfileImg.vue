@@ -6,6 +6,7 @@
 
 <script setup lang="ts">
 import type { CellEvent } from 'ag-grid-community';
+import { onMounted } from 'vue';
 
 defineProps<{
   params: CellEvent;

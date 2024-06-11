@@ -1,4 +1,4 @@
-import { consoleLogInstance } from '@/api';
+// import { consoleLogInstance } from '@/api';
 import { useAxios } from '@vueuse/integrations/useAxios';
 
 enum Api {
@@ -17,8 +17,8 @@ export const createLog = (params: any) => {
         'Content-Type': 'application/json',
         'Access-Control-Allow-Origin': '*',
       },
-    },
-    consoleLogInstance
+    }
+    // consoleLogInstance
   );
 };
 
@@ -32,7 +32,7 @@ export const getConsoleAccessLogs = (params: any) => {
         'Content-Type': 'application/json',
         'Access-Control-Allow-Origin': '*',
       },
-    },
-    consoleLogInstance
+    }
+    // consoleLogInstance
   );
 };

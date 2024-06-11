@@ -1,5 +1,5 @@
 import { useAxios } from '@vueuse/integrations/useAxios';
-import { portalPolicyInstance } from '../..';
+// import { portalPolicyInstance } from '../..';
 
 enum Api {
   GET_PORTAL_POLICY_INFO = '/',
@@ -18,8 +18,8 @@ const createPortalPolicy = (params: any) => {
         'Content-Type': 'application/json',
         'Access-Control-Allow-Origin': '*',
       },
-    },
-    portalPolicyInstance
+    }
+    // portalPolicyInstance
   );
 };
 
@@ -32,8 +32,8 @@ const getPortalPolicies = (params: any) => {
         'Content-Type': 'application/json',
         'Access-Control-Allow-Origin': '*',
       },
-    },
-    portalPolicyInstance
+    }
+    // portalPolicyInstance
   );
 };
 
@@ -47,8 +47,8 @@ const updatePortalPolicy = (params: any) => {
         'Content-Type': 'application/json',
         'Access-Control-Allow-Origin': '*',
       },
-    },
-    portalPolicyInstance
+    }
+    // portalPolicyInstance
   );
 };
 
@@ -62,8 +62,8 @@ const deletePortalPolicy = (params: any) => {
         'Content-Type': 'application/json',
         'Access-Control-Allow-Origin': '*',
       },
-    },
-    portalPolicyInstance
+    }
+    // portalPolicyInstance
   );
 };
 

@@ -1,4 +1,4 @@
-import { consoleUserInstance } from '@/api';
+// import {  } from '@/api';
 import { useAxios } from '@vueuse/integrations/useAxios';
 // import {
 //   AddUserInfoParams,
@@ -17,81 +17,61 @@ enum Api {
 }
 
 export const fetchUser = (params: any) => {
-  return useAxios(Api.FETCH_USER, { method: 'GET' }, consoleUserInstance);
+  return useAxios(Api.FETCH_USER, { method: 'GET' });
 };
 
 const createUser = (params: any) => {
-  return useAxios(
-    Api.ADD_USER_INFO,
-    {
-      method: 'POST',
-      data: params,
-      headers: {
-        'Content-Type': 'application/json',
-        'Access-Control-Allow-Origin': '*',
-      },
+  return useAxios(Api.ADD_USER_INFO, {
+    method: 'POST',
+    data: params,
+    headers: {
+      'Content-Type': 'application/json',
+      'Access-Control-Allow-Origin': '*',
     },
-    consoleUserInstance
-  );
+  });
 };
 
 const getUsers = (params: any) => {
-  return useAxios(
-    `${Api.GET_USER_INFO}?query=${params.query}`,
-    {
-      method: 'GET',
-      headers: {
-        'Content-Type': 'application/json',
-        'Access-Control-Allow-Origin': '*',
-      },
+  return useAxios(`${Api.GET_USER_INFO}?query=${params.query}`, {
+    method: 'GET',
+    headers: {
+      'Content-Type': 'application/json',
+      'Access-Control-Allow-Origin': '*',
     },
-    consoleUserInstance
-  );
+  });
 };
 
 const updateUser = (params: { urn: string; updateUserRequest: any }) => {
-  return useAxios(
-    `${Api.UPDATE_USER_INFO}/${params.urn}`,
-    {
-      method: 'PATCH',
-      data: params.updateUserRequest,
-      headers: {
-        'Content-Type': 'application/json',
-        'Access-Control-Allow-Origin': '*',
-      },
+  return useAxios(`${Api.UPDATE_USER_INFO}/${params.urn}`, {
+    method: 'PATCH',
+    data: params.updateUserRequest,
+    headers: {
+      'Content-Type': 'application/json',
+      'Access-Control-Allow-Origin': '*',
     },
-    consoleUserInstance
-  );
+  });
 };
 
 const deleteUser = (params: { urn: string }) => {
-  return useAxios(
-    Api.REMOVE_USER_INFO + '/' + params.urn,
-    {
-      method: 'DELETE',
-      data: params,
-      headers: {
-        'Content-Type': 'application/json',
-        'Access-Control-Allow-Origin': '*',
-      },
+  return useAxios(Api.REMOVE_USER_INFO + '/' + params.urn, {
+    method: 'DELETE',
+    data: params,
+    headers: {
+      'Content-Type': 'application/json',
+      'Access-Control-Allow-Origin': '*',
     },
-    consoleUserInstance
-  );
+  });
 };
 
 const uploadImageToS3 = (params: any) => {
-  return useAxios(
-    Api.UPDATE_PROFILE_IMG,
-    {
-      method: 'POST',
-      data: params,
-      headers: {
-        'Content-Type': 'multipart/form-data',
-        'Access-Control-Allow-Origin': '*',
-      },
+  return useAxios(Api.UPDATE_PROFILE_IMG, {
+    method: 'POST',
+    data: params,
+    headers: {
+      'Content-Type': 'multipart/form-data',
+      'Access-Control-Allow-Origin': '*',
     },
-    consoleUserInstance
-  );
+  });
 };
 
 export { createUser, getUsers, updateUser, deleteUser, uploadImageToS3 };

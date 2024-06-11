@@ -20,11 +20,10 @@
         </div>
       </div>
       <div class="rule-metadata-footer">
-        <span class="rule-metadata-message">{{ resMessage }}</span>
+        <!-- <span class="rule-metadata-message">{{ resMessage }}</span> -->
         <q-btn
           style="align-self: flex-end; margin: 0 1rem; width: 100px; border-radius: 0.5rem"
           label="적용"
-          @click="ruleTemplateUpdate"
         />
       </div>
     </div>
@@ -39,7 +38,7 @@ import { onMounted } from 'vue';
 import VueJsonPretty from 'vue-json-pretty';
 import 'vue-json-pretty/lib/styles.css';
 
-import { getRuleTemplate, updateRuleTemplate } from '@/api/modules/home/rules';
+// import { getRuleTemplate, updateRuleTemplate } from '@/api/modules/home/rules';
 const props = defineProps<{
   ruleName: string;
   popupShow: boolean;
@@ -54,56 +53,56 @@ const updatePopupShow = (value: boolean) => {
 const beforeData = ref('');
 const currentData = ref('');
 
-const fetch = async () => {
-  if (!props.popupShow || props.ruleName === '') return;
+// const fetch = async () => {
+//   if (!props.popupShow || props.ruleName === '') return;
 
-  const res = await getRuleTemplate(props.ruleName);
-  if (res.data.value.data) {
-    const { before, current } = res.data.value.data;
-    beforeData.value = before;
-    currentData.value = current;
-  }
-};
+//   const res = await getRuleTemplate(props.ruleName);
+//   if (res.data.value.data) {
+//     const { before, current } = res.data.value.data;
+//     beforeData.value = before;
+//     currentData.value = current;
+//   }
+// };
 
-const resMessage = ref('');
+// const resMessage = ref('');
 
-const ruleTemplateUpdate = async () => {
-  if (props.ruleName !== '') {
-    const res = await updateRuleTemplate(props.ruleName);
-    if (res.data.value.data) {
-      await fetch();
-      resMessage.value = '변경되었습니다.';
-    } else {
-      if (res.data.value.statusCode === 304) {
-        resMessage.value = '변경사항이 없습니다.';
-      } else {
-        resMessage.value = '오류가 발생했습니다.';
-      }
-    }
-  }
-};
+// const ruleTemplateUpdate = async () => {
+//   if (props.ruleName !== '') {
+//     const res = await updateRuleTemplate(props.ruleName);
+//     if (res.data.value.data) {
+//       await fetch();
+//       resMessage.value = '변경되었습니다.';
+//     } else {
+//       if (res.data.value.statusCode === 304) {
+//         resMessage.value = '변경사항이 없습니다.';
+//       } else {
+//         resMessage.value = '오류가 발생했습니다.';
+//       }
+//     }
+//   }
+// };
 
-watch(
-  () => props.popupShow,
-  async () => {
-    resMessage.value = '';
-    if (props.popupShow) {
-      await fetch();
-    }
-  }
-);
+// watch(
+//   () => props.popupShow,
+//   async () => {
+//     resMessage.value = '';
+//     if (props.popupShow) {
+//       await fetch();
+//     }
+//   }
+// );
 
-watch(
-  () => props.ruleName,
-  async () => {
-    if (props.popupShow) {
-      await fetch();
-    }
-  }
-);
-onMounted(async () => {
-  await fetch();
-});
+// watch(
+//   () => props.ruleName,
+//   async () => {
+//     if (props.popupShow) {
+//       await fetch();
+//     }
+//   }
+// );
+// onMounted(async () => {
+//   await fetch();
+// });
 
 onMounted(() => {});
 </script>

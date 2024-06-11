@@ -1,4 +1,4 @@
-import { teamInstance } from '@/api';
+// import { teamInstance } from '@/api';
 import { useAxios } from '@vueuse/integrations/useAxios';
 
 enum Api {
@@ -19,8 +19,8 @@ const createTeam = (params: any) => {
         'Content-Type': 'application/json',
         'Access-Control-Allow-Origin': '*',
       },
-    },
-    teamInstance
+    }
+    // teamInstance
   );
 };
 
@@ -33,8 +33,8 @@ const getTeams = (params: any) => {
         'Content-Type': 'application/json',
         'Access-Control-Allow-Origin': '*',
       },
-    },
-    teamInstance
+    }
+    // teamInstance
   );
 };
 
@@ -47,8 +47,8 @@ const getTeam = (params: any) => {
         'Content-Type': 'application/json',
         'Access-Control-Allow-Origin': '*',
       },
-    },
-    teamInstance
+    }
+    // teamInstance
   );
 };
 
@@ -62,8 +62,8 @@ const updateTeam = (params: any) => {
         'Content-Type': 'application/json',
         'Access-Control-Allow-Origin': '*',
       },
-    },
-    teamInstance
+    }
+    // teamInstance
   );
 };
 
@@ -77,8 +77,8 @@ const deleteTeam = (params: any) => {
         'Content-Type': 'application/json',
         'Access-Control-Allow-Origin': '*',
       },
-    },
-    teamInstance
+    }
+    // teamInstance
   );
 };
 

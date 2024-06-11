@@ -2,25 +2,32 @@
   <div class="menu-cont">
     <div class="menu__title">Service Controller</div>
 
-    <!-- TODO: Sidebar 값 전달 -->
     <div class="menu-cnt">
-      <RouterLink
-        class="menu-item"
-        v-for="(menu, idx) in SIDEBAR_OPTIONS"
-        :to="{ name: getNearestRouteName(menu.menus, idx) }"
-        :key="idx"
-        @click="setSelectedServiceIndex(idx)"
-      >
-        <div class="menu-item__icon-container">
-          <h-img
-            v-if="menu.title === 'Customer Management'"
-            class="menu-item__icon"
-            :src="icCustomerService"
-          />
-          <h-img v-else class="menu-item__icon" :src="menu.icon" />
-        </div>
-        <p class="menu-item__title">{{ menu.title }}</p>
-      </RouterLink>
+      <div class="menu-item" v-for="(menu, idx) in SIDEBAR_OPTIONS" :key="idx">
+        <RouterLink
+          v-if="menu.title === 'Customer Management' || menu.title === 'Knowledge Data Management'"
+          class="menu-item__all"
+          :to="{ name: getNearestRouteName(menu.menus, idx) }"
+          @click="setSelectedServiceIndex(idx)"
+        >
+          <div class="menu-item__icon-container">
+            <h-img class="menu-item__icon" :src="menu.icon" />
+          </div>
+          <p class="menu-item__title">{{ menu.title }}</p>
+        </RouterLink>
+        <RouterLink
+          disabled
+          v-else
+          class="menu-item__all"
+          @click="setSelectedServiceIndex(idx)"
+          :to="{ name: 'EntryView' }"
+        >
+          <div class="menu-item__icon-container">
+            <h-img class="menu-item__icon" :src="menu.icon" />
+          </div>
+          <p class="menu-item__title">{{ menu.title }}</p>
+        </RouterLink>
+      </div>
     </div>
     <h-btn padding="8px 82px" color="primary" label="로그아웃" @click="logout" />
   </div>
@@ -32,7 +39,6 @@ import { SIDEBAR_OPTIONS } from '@/components/Sidebar/constants';
 import type { Menu } from '@/components/Sidebar/types';
 import { useAccountStore } from '@/store/account';
 import { useRouter } from 'vue-router';
-import icCustomerService from '@/assets/images/icons/customer-service.svg';
 
 const router = useRouter();
 
@@ -101,18 +107,17 @@ const logout = () => {
     justify-content: space-between;
   }
   &-item {
-    position: relative;
-    display: flex;
-    width: 100%;
-    aspect-ratio: 1;
-    max-height: 120px;
-    background: rgba(250, 250, 250, 0.2);
-    border-radius: 20px;
-    box-shadow: 0px 2px 4px var(--color-shadow);
-    width: 18rem;
-    // &__all {
-    //   display: flex;
-    // }
+    &__all {
+      position: relative;
+      display: flex;
+      width: 100%;
+      aspect-ratio: 1;
+      max-height: 120px;
+      background: rgba(250, 250, 250, 0.2);
+      border-radius: 20px;
+      box-shadow: 0px 2px 4px var(--color-shadow);
+      width: 18rem;
+    }
     &__icon {
       &-container {
         position: absolute;

@@ -1,4 +1,4 @@
-import { consoleTenantInstance } from '../../index';
+// import { consoleTenantInstance } from '../../index';
 import { useAxios } from '@vueuse/integrations/useAxios';
 
 enum Api {
@@ -18,5 +18,5 @@ enum Api {
 
 export const validateConsoleTenant = ({ tenantName }: { tenantName: string }) => {
   const url = Api.VALIDATE_TENANT + '/' + tenantName;
-  return useAxios(url, { method: 'GET' }, consoleTenantInstance);
+  return useAxios(url, { method: 'GET' });
 };

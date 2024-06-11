@@ -11,7 +11,10 @@
       @grid-ready="onGridReady"
     />
 
-    <!-- <q-btn label="submit" color="primary" @click="submit" /> -->
+    <!-- <div class="management-account__btn-create">
+      <q-btn label="Update" color="primary" />
+      <TenantCreateForm />
+    </div> -->
 
     <Transition>
       <div v-if="isLoading" class="management-account-cloak">
@@ -24,13 +27,14 @@
 <script setup lang="ts">
 import { onMounted, ref } from 'vue';
 import { storeToRefs } from 'pinia';
+import HDataTable from '@/components/HDataTable/HDataTable.vue';
 import { useRowDataStore } from '@/store/rowData';
-import { getAccounts, getSocialUsers } from '@/api/modules/provider/account';
+import { getSocialUsers, updateSocialUser } from '@/api/modules/provider/account';
 import { DEFAULT_COL_DEF } from '@/constants';
 
 import { AgGridVue } from 'ag-grid-vue3';
 import HCellRendererBtnRemove from '@/components/HCellRenderer/HCellRendererBtnRemove.vue';
-import HCellRendererBtnEdit from '@/components/HCellRenderer/HCellRendererBtnEdit.vue';
+import HCellRendererBtnEdit from './_partials/HCellRendererBtnEdit.vue';
 import HCellRendererProfileImg from '@/components/HCellRenderer/HCellRendererProfileImg.vue';
 import type {
   GridReadyEvent,
@@ -38,6 +42,7 @@ import type {
   ColumnApi,
   CellValueChangedEvent,
   ICellRendererParams,
+  ColDef,
 } from 'ag-grid-community';
 import HCellRendererToggleBtn from '@/components/HCellRenderer/HCellRendererToggleBtn.vue';
 import { findSecurityTerm } from '@/api/modules/provider/security-term';
@@ -81,63 +86,42 @@ onMounted(async () => {
   setTimeout(() => (isLoading.value = false), 100);
 });
 
-const columnDefs = [
+const columnDefs: ColDef[] = [
   {
     headerName: 'Profile Image',
     field: 'profileImage',
     sortable: false,
+    hide: false,
+    editable: true,
     cellRenderer: HCellRendererProfileImg,
   },
   { headerName: 'Display Name', field: 'displayName', editable: true },
-  // update: tenant name 삭제
-  // {
-  //   headerName: 'Tenant Name',
-  //   field: 'tenants',
-
-  //   valueFormatter: ({ data }: any) => data.tenants.at(0)?.tenantName ?? '-',
-  // },
-  { headerName: 'Social Email', field: 'socialEmail' },
+  { headerName: 'Social Email', field: 'socialEmail', editable: true },
   {
     headerName: 'Email Status',
     field: 'emailStatus',
-    // sortable: false,
-    // valueFormatter: ({ data }: any) => {
-    //   if (!data['accountStatus']['emailVerified'] && !data['accountStatus']['getStarted']) {
-    //     return 'loggedIn';
-    //   }
-    //   if (!data['accountStatus']['getStarted'] && data['accountStatus']['emailVerified']) {
-    //     return 'emailVerified';
-    //   }
-    //   if (data['accountStatus']['getStarted']) {
-    //     return 'getStarted';
-    //   }
-    // },
-    // cellStyle: ({ data }: any) => {
-    //   if (!data['accountStatus']['emailVerified'] && !data['accountStatus']['getStarted']) {
-    //     return { backgroundColor: '#EC5858', color: '#FFFFFF' };
-    //   }
-    //   if (!data['accountStatus']['getStarted'] && data['accountStatus']['emailVerified']) {
-    //     return { backgroundColor: '#FFB830', color: '#FFFFFF' };
-    //   }
-    //   if (data['accountStatus']['getStarted']) {
-    //     return { backgroundColor: '#3DB2FF', color: '#FFFFFF' };
-    //   }
-    // },
+    editable: false,
+    cellStyle: ({ data }: any) => {
+      if (data['emailStatus'] === 'loggedIn') {
+        return { backgroundColor: '#EC5858', color: '#FFFFFF' };
+      }
+      if (data['emailStatus'] === 'emailVerified') {
+        return { backgroundColor: '#FFB830', color: '#FFFFFF' };
+      }
+      if (data['emailStatus']['getStarted']) {
+        return { backgroundColor: '#3DB2FF', color: '#FFFFFF' };
+      }
+    },
   },
+  { headerName: 'GEO Location', field: 'geoLocation' },
   { headerName: 'Login IP Address', field: 'loginIpaddress' },
   { headerName: 'Login Location', field: 'loginLocation' },
-  // {
-  //   headerName: '',
-  //   field: 'editAccount',
-  //   sortable: false,
-  //   cellRenderer: HCellRendererBtnEdit,
-  // },
-  // {
-  //   headerName: '',
-  //   field: 'removeAccount',
-  //   sortable: false,
-  //   cellRenderer: HCellRendererBtnRemove,
-  // },
+  { headerName: 'Last Login', field: 'lastLogin' },
+  {
+    headerName: '',
+    field: 'editSocialUser',
+    cellRenderer: HCellRendererBtnEdit,
+  },
 ];
 
 const gridApi = ref<GridApi>();
@@ -151,8 +135,9 @@ const onGridReady = ({ api, columnApi }: GridReadyEvent) => {
 };
 
 const cellChanged = async (e: CellValueChangedEvent | ICellRendererParams) => {
+  console.log(e.column);
   accounts.value.forEach((account) => {
-    // console.log(account);
+    console.log(account);
   });
 
   if (!e.column) return;
@@ -185,6 +170,11 @@ const setColumns = async () => {
     justify-content: center;
     border-radius: 8px;
     background: var(--color-white);
+  }
+  &__btn-create {
+    position: absolute;
+    left: 16px;
+    bottom: 14px;
   }
 }
 

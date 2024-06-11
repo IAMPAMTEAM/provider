@@ -11,10 +11,10 @@
       @grid-ready="onGridReady"
     />
 
-    <div class="management-tenants__btn-create">
+    <!-- <div class="management-tenants__btn-create">
       <q-btn label="Create" color="green" @click="toggleShow" />
       <TenantCreateForm :show="show" @add="createTenant" @close="toggleShow" />
-    </div>
+    </div> -->
 
     <Transition>
       <div v-if="isLoading" class="management-tenants-cloak">

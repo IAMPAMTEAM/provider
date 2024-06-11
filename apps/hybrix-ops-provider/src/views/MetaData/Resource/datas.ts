@@ -45,11 +45,13 @@ export const columnDefs: ColDef[] = [
     headerName: 'description',
     field: 'description',
     hide: false,
+    minWidth: 400,
   },
   {
     headerName: 'description-ko',
     field: 'description-ko',
     hide: false,
+    minWidth: 400,
   },
   {
     headerName: 'checkRuleType',

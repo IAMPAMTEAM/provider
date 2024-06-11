@@ -1,7 +1,7 @@
 import icGear from '@/assets/images/icons/ic-gear.svg';
 import icCode from '@/assets/images/icons/code.svg';
-import icCustomerService from '@/assets/images/icons/ic-dot.svg';
 import icDevelop from '@/assets/images/icons/self-development.svg';
+import icCustomerService from '@/assets/images/icons/customer-service.svg';
 
 import { Service } from '../enums';
 import type { SidebarOption } from '../types';

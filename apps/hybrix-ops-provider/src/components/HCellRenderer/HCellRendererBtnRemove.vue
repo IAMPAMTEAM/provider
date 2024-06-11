@@ -57,8 +57,8 @@ const deleteRowData = async () => {
         break;
     }
 
-    await RemoveFunctionMap[field](params);
-    rowDataStore.updateRowData(RemoveRowDataMap[field], rowIndex);
+    // await RemoveFunctionMap[field](params);
+    // rowDataStore.updateRowData(RemoveRowDataMap[field], rowIndex);
   }
 };
 </script>

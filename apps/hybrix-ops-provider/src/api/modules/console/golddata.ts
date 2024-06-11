@@ -1,6 +1,6 @@
 import { useAxios } from '@vueuse/integrations/useAxios';
 // import { baseApi } from '@/api';
-import { golddataInstance } from '@/api';
+// import { golddataInstance } from '@/api';
 
 // const getOneGoldData = (payload: any) => {
 //   payload.url = `/golddata/${payload.name}?urn=${payload.urn}${
@@ -40,8 +40,8 @@ export const getDashboardDaily = (params: GetDashboardDailyParams) => {
       params: {
         date: params.date,
       },
-    },
-    golddataInstance
+    }
+    // golddataInstance
   );
 };
 
@@ -53,7 +53,7 @@ export const getDashboardWeekly = (params: GetDashboardWeeklyParams) => {
       params: {
         startDate: params.startDate,
       },
-    },
-    golddataInstance
+    }
+    // golddataInstance
   );
 };

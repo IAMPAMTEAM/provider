@@ -1,7 +1,7 @@
 <template>
   <div class="otp-container">
     <div class="otp-title">OTP Policy</div>
-    <div class="otp-option">
+    <!-- <div class="otp-option">
       <span>
         <input
           type="radio"
@@ -27,7 +27,7 @@
       <span>
         <h-button label="Reset OTP" :disabled="otpOption.disabled"></h-button>
       </span>
-    </div>
+    </div> -->
   </div>
 
   <div class="privilege-container">

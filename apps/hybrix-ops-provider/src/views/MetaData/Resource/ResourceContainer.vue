@@ -117,9 +117,8 @@ const cellChanged = async (e: CellValueChangedEvent | ICellRendererParams) => {
 // };
 
 const fetch = async () => {
-  const query = JSON.stringify({});
-  const res = await findAwsResourceType({ query });
-  awsResourceType.value = res.data.value.data;
+  const { data } = await findAwsResourceType();
+  awsResourceType.value = JSON.parse(data.value.body);
 };
 const setColumns = async () => {
   awsResourceTypeColumns.value = columnDefs;

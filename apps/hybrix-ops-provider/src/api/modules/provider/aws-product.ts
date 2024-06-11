@@ -1,5 +1,5 @@
 import { useAxios } from '@vueuse/integrations/useAxios';
-import { providerAwsProductInstance, providerAuthInstance } from '@/api';
+import { providerAwsProductInstance, providerAuthInstance, awsProductsInstance } from '@/api';
 
 enum Api {
   FIND_AWS_PRODUCT = '/',
@@ -9,14 +9,21 @@ enum Api {
   UPLOAD_AWS_PRODUCT = '/upload',
 }
 
-const findAwsProduct = ({ query }: any) => {
+const findAwsProduct = () => {
   return useAxios(
-    `${Api.FIND_AWS_PRODUCT}?query=${query}`,
+    '/',
     {
       method: 'GET',
     },
-    providerAwsProductInstance
+    awsProductsInstance
   );
+  // return useAxios(
+  //   `${Api.FIND_AWS_PRODUCT}?query=${query}`,
+  //   {
+  //     method: 'GET',
+  //   },
+  //   providerAwsProductInstance
+  // );
 };
 
 const addAwsProduct = (params: any) => {

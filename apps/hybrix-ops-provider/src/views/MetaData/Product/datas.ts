@@ -34,17 +34,39 @@ export const settings = {
 };
 
 export const columnDefs: ColDef[] = [
-  { headerName: 'awsProductCode', field: 'awsProductCode', hide: false },
-  { headerName: 'awsProductName', field: 'awsProductName', hide: false, editable: true },
   {
-    headerName: 'awsProductCategory',
-    field: 'awsProductCategory',
+    headerName: 'awsResourceType',
+    field: 'awsResourceType',
     hide: false,
     editable: true,
   },
   {
-    headerName: 'awsProductDescription',
-    field: 'awsProductDescription',
+    headerName: 'awsResourceTypeName',
+    field: 'awsResourceTypeName',
+    hide: false,
+    editable: true,
+  },
+  {
+    headerName: 'awsResourceTypeFullName',
+    field: 'awsResourceTypeFullName',
+    hide: false,
+    editable: true,
+  },
+  {
+    headerName: 'awsServiceName',
+    field: 'awsServiceName',
+    hide: false,
+    editable: true,
+  },
+  {
+    headerName: 'awsServiceCategory',
+    field: 'awsServiceCategory',
+    hide: false,
+    editable: true,
+  },
+  {
+    headerName: 'awsResourceTypeShortName',
+    field: 'awsResourceTypeShortName',
     hide: false,
     editable: true,
   },

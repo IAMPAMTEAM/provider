@@ -38,6 +38,18 @@ export const columnDefs: ColDef[] = [
   { headerName: 'awsRegionName', field: 'awsRegionName', hide: false, editable: true },
   { headerName: 'awsRegionName-ko', field: 'awsRegionName-ko', hide: false, editable: true },
   {
+    headerName: 'awsRegionFullName',
+    field: 'awsRegionFullName',
+    hide: false,
+    editable: true,
+  },
+  {
+    headerName: 'awsRegionFullName-ko',
+    field: 'awsRegionFullName-ko',
+    hide: false,
+    editable: true,
+  },
+  {
     headerName: 'awsRegionCountry',
     field: 'awsRegionCountry',
     hide: false,
@@ -46,18 +58,6 @@ export const columnDefs: ColDef[] = [
   {
     headerName: 'awsRegionCountry-ko',
     field: 'awsRegionCountry-ko',
-    hide: false,
-    editable: true,
-  },
-  {
-    headerName: 'awsRegionCity',
-    field: 'awsRegionCity',
-    hide: false,
-    editable: true,
-  },
-  {
-    headerName: 'awsRegionCity-ko',
-    field: 'awsRegionCity-ko',
     hide: false,
     editable: true,
   },

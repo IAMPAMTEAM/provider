@@ -18,6 +18,8 @@ export const awsAccountInstance = createProviderInstance('awsaccount');
 export const awsSocialUsersInstance = createProviderInstance('socialusers');
 export const awsTenantsInstance = createProviderInstance('tenants');
 export const awsRegionsInstance = createProviderInstance('awsregions');
+export const awsProductsInstance = createProviderInstance('awsproducts');
+export const awsCheckRulesInstance = createProviderInstance('awscheckrules');
 
 export const providerAuthInstance = createInstance('HOME', 'provider/auth');
 export const homeLogInstance = createInstance('HOME', 'provider/logs');

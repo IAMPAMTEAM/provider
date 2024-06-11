@@ -117,9 +117,8 @@ const cellChanged = async (e: CellValueChangedEvent | ICellRendererParams) => {
 // };
 
 const fetch = async () => {
-  const query = JSON.stringify({});
-  const res = await findAwsProduct({ query });
-  awsProducts.value = res.data.value.data;
+  const { data } = await findAwsProduct();
+  awsProducts.value = JSON.parse(data.value.body);
 };
 const setColumns = async () => {
   awsProductColumns.value = columnDefs;

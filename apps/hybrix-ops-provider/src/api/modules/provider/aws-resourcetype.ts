@@ -1,5 +1,5 @@
 import { useAxios } from '@vueuse/integrations/useAxios';
-import { providerAwsResourceTypeInstance, providerAuthInstance } from '@/api';
+import { providerAwsResourceTypeInstance, awsCheckRulesInstance } from '@/api';
 
 enum Api {
   FIND_AWS_RESOURCE_TYPE = '/',
@@ -9,13 +9,13 @@ enum Api {
   UPLOAD_AWS_RESOURCE_TYPE = '/upload',
 }
 
-const findAwsResourceType = ({ query }: any) => {
+const findAwsResourceType = () => {
   return useAxios(
-    `${Api.FIND_AWS_RESOURCE_TYPE}?query=${query}`,
+    '/',
     {
       method: 'GET',
     },
-    providerAwsResourceTypeInstance
+    awsCheckRulesInstance
   );
 };
 

@@ -114,11 +114,8 @@ const cellChanged = async (e: CellValueChangedEvent | ICellRendererParams) => {
 // };
 
 const fetch = async () => {
-  // const query = JSON.stringify({});
-  // const res = await findAwsRegion({ query });
   const { data } = await getRegions();
   awsRegion.value = JSON.parse(data.value.body);
-  console.log(awsRegion.value);
 };
 const setColumns = async () => {
   awsRegionColumns.value = columnDefs;

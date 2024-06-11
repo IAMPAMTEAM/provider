@@ -34,6 +34,86 @@ export const settings = {
 };
 
 export const columnDefs: ColDef[] = [
-  { headerName: 'awsResourceTypeName', field: 'awsResourceTypeName', hide: false },
-  { headerName: 'awsResourceType', field: 'awsResourceType', hide: false },
+  { headerName: 'checkRuleID', field: 'checkRuleID', hide: false },
+  { headerName: 'checkRuleName', field: 'checkRuleName', hide: false },
+  {
+    headerName: 'checkRuleName-ko',
+    field: 'checkRuleName-ko',
+    hide: false,
+  },
+  {
+    headerName: 'description',
+    field: 'description',
+    hide: false,
+  },
+  {
+    headerName: 'description-ko',
+    field: 'description-ko',
+    hide: false,
+  },
+  {
+    headerName: 'checkRuleType',
+    field: 'checkRuleType',
+    hide: false,
+  },
+  {
+    headerName: 'ifApply',
+    field: 'ifApply',
+    hide: false,
+  },
+  {
+    headerName: 'securityTerms',
+    field: 'securityTerms',
+    hide: false,
+  },
+  {
+    headerName: 'awsResourceType',
+    field: 'awsResourceType',
+    hide: false,
+  },
+  {
+    headerName: 'awsResourceTypeName',
+    field: 'awsResourceTypeName',
+    hide: false,
+  },
+  {
+    headerName: 'identifier',
+    field: 'identifier',
+    hide: false,
+  },
+  {
+    headerName: 'awsProductCode',
+    field: 'awsProductCode',
+    hide: false,
+  },
+  {
+    headerName: 'triggerType',
+    field: 'triggerType',
+    hide: false,
+  },
+  {
+    headerName: 'defaultSeverity',
+    field: 'defaultSeverity',
+    hide: false,
+  },
+  {
+    headerName: 'financeSeverity',
+    field: 'financeSeverity',
+    hide: false,
+  },
+  {
+    headerName: 'customerPersonalInfoSeverity',
+    field: 'customerPersonalInfoSeverity',
+    hide: false,
+  },
+  {
+    headerName: 'hybrixRuleName',
+    field: 'hybrixRuleName',
+    hide: false,
+  },
+  {
+    headerName: 'lambdaName',
+    field: 'lambdaName',
+    hide: false,
+  },
 ];

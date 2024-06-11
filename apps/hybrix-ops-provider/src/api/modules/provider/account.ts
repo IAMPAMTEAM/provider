@@ -5,6 +5,7 @@ import {
   awsSocialUsersInstance,
   awsTenantsInstance,
   awsRegionsInstance,
+  awsProductsInstance,
 } from '@/api';
 import type { RetrieveParams, UpdateParams, DeleteParams } from '@/api/types';
 
@@ -74,6 +75,16 @@ export const getRegions = async () => {
       method: 'GET',
     },
     awsRegionsInstance
+  );
+};
+
+export const getProducts = async () => {
+  return useAxios(
+    '/',
+    {
+      method: 'GET',
+    },
+    awsProductsInstance
   );
 };
 
